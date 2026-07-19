@@ -1,5 +1,9 @@
 [build]
   command = "npm run build"
+  # Correct publish dir for @netlify/plugin-nextjs v5. Setting it here (in
+  # config) also overrides the sticky "publish = repo root" value stuck in
+  # the Netlify UI, which caused the "publish dir cannot equal base dir" error.
+  publish = ".next"
 
 [build.environment]
   NODE_VERSION = "20"
